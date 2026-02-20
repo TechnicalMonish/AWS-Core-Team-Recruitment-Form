@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="Cloud Club Recruitment" width="280" />
+  <img src="banner.png" alt="Cloud Club Recruitment" width="280" />
 </p>
 
 <h1 align="center">☁️ Cloud Club — Core Team Recruitment Template</h1>

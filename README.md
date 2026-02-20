@@ -25,15 +25,27 @@
 </p>
 <p align="center"><em>Full page overview of the recruitment form</em></p>
 
-| Step |           Screenshot            | Description                                                  |
-| :--: | :-----------------------------: | ------------------------------------------------------------ |
-|  1   | <img src="1.png" width="400" /> | Personal details — name, email, phone, branch, section, year |
-|  2   | <img src="2.png" width="400" /> | Essay questions — why join, improvements, expectations       |
-|  3   | <img src="3.png" width="400" /> | Skills & expertise — checkboxes, proof links                 |
-|  4   | <img src="4.png" width="400" /> | Workshop availability & acknowledgment                       |
-|  5   | <img src="5.png" width="400" /> | Success page with confetti & WhatsApp group link             |
+**Step 1** — Personal details (name, email, phone, branch, section, year)
 
-> Drop `pre.png`, `1.png`, `2.png`, `3.png`, `4.png`, `5.png` into the repo root for these to render.
+<p align="center"><img src="1.png" alt="Step 1" width="600" /></p>
+
+**Step 2** — Essay questions (why join, improvements, expectations)
+
+<p align="center"><img src="2.png" alt="Step 2" width="600" /></p>
+
+**Step 3** — Skills & expertise (checkboxes, proof links)
+
+<p align="center"><img src="3.png" alt="Step 3" width="600" /></p>
+
+**Step 4** — Workshop availability & acknowledgment
+
+<p align="center"><img src="4.png" alt="Step 4" width="600" /></p>
+
+**Step 5** — Success page with confetti & WhatsApp group link
+
+<p align="center"><img src="5.png" alt="Step 5" width="600" /></p>
+
+> Drop `pre.png`, `1.png` – `5.png` into the repo root for these to render.
 
 ---
 
@@ -46,7 +58,7 @@
 - 📊 **Google Sheets Integration** — Zero-cost, serverless data collection
 - 💬 **WhatsApp Group Link** — Post-submission CTA to keep applicants in the loop
 - 🆓 **100% Free** — No subscriptions, no third-party form tools, no hidden costs
-- 🔗 **Just Share the Link** — Host it anywhere (GitHub Pages, Netlify, Vercel) and share in your groups
+- **Just Share the Link** — Host it anywhere (GitHub Pages, Netlify, Vercel) and share in your groups
 
 ---
 

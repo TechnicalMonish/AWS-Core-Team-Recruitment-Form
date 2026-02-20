@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="logo.png" alt="AWS Cloud Clubs" width="280" />
+  <img src="logo.png" alt="Cloud Club Recruitment" width="280" />
 </p>
 
-<h1 align="center">☁️ AWS Cloud Clubs — Core Team Recruitment</h1>
+<h1 align="center">☁️ Cloud Club — Core Team Recruitment Template</h1>
 
 <p align="center">
-  A sleek, multi-step recruitment form for the AWS Cloud Clubs Core Team.<br/>
-  No backend needed — submissions go straight to Google Sheets via Apps Script.
+  A free, open-source, multi-step recruitment form template — no Google Forms, no third-party form builders, no backend.<br/>
+  Just share the link in your group, collect applications, and get responses straight in Google Sheets.
 </p>
 
 <p align="center">
@@ -18,6 +18,25 @@
 
 ---
 
+## 👀 Preview
+
+<p align="center">
+  <img src="pre.png" alt="Full Page Overview" width="700" />
+</p>
+<p align="center"><em>Full page overview of the recruitment form</em></p>
+
+| Step |           Screenshot            | Description                                                  |
+| :--: | :-----------------------------: | ------------------------------------------------------------ |
+|  1   | <img src="1.png" width="400" /> | Personal details — name, email, phone, branch, section, year |
+|  2   | <img src="2.png" width="400" /> | Essay questions — why join, improvements, expectations       |
+|  3   | <img src="3.png" width="400" /> | Skills & expertise — checkboxes, proof links                 |
+|  4   | <img src="4.png" width="400" /> | Workshop availability & acknowledgment                       |
+|  5   | <img src="5.png" width="400" /> | Success page with confetti & WhatsApp group link             |
+
+> Drop `pre.png`, `1.png`, `2.png`, `3.png`, `4.png`, `5.png` into the repo root for these to render.
+
+---
+
 ## ✨ Features
 
 - 🧩 **4-Step Form** — Clean, guided multi-page flow with progress indicator
@@ -26,6 +45,8 @@
 - ✅ **Client-Side Validation** — Required fields, email & phone format checks
 - 📊 **Google Sheets Integration** — Zero-cost, serverless data collection
 - 💬 **WhatsApp Group Link** — Post-submission CTA to keep applicants in the loop
+- 🆓 **100% Free** — No subscriptions, no third-party form tools, no hidden costs
+- 🔗 **Just Share the Link** — Host it anywhere (GitHub Pages, Netlify, Vercel) and share in your groups
 
 ---
 
@@ -35,32 +56,57 @@
 ├── index.html      # Multi-step form markup
 ├── styles.css      # All styling, animations, and responsive rules
 ├── script.js       # Navigation, validation, confetti, and Sheets submission
-├── logo.png        # Club logo
+├── logo.png        # Your club/org logo (replace with your own)
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Setup (3 Placeholders)
 
-1. **Clone the repo**
+After cloning, you only need to replace **3 placeholders** to make this your own:
 
-   ```bash
-   git clone https://github.com/your-username/aws-cloud-clubs-recruitment.git
-   cd aws-cloud-clubs-recruitment
-   ```
-
-2. **Open `index.html`** in your browser — that's it, no build tools needed.
-
-3. **Connect Google Sheets** (see below) to start collecting responses.
+| Placeholder               | File         | What to Replace With                     |
+| ------------------------- | ------------ | ---------------------------------------- |
+| `YOUR_LOGO_PATH`          | `index.html` | Path to your logo file (e.g. `logo.png`) |
+| `YOUR_GOOGLE_SHEET_URL`   | `script.js`  | Your Google Apps Script Web App URL      |
+| `YOUR_WHATSAPP_GROUP_URL` | `index.html` | Your WhatsApp group invite link          |
 
 ---
 
-## 📊 Connect Your Own Google Sheet
+## 🖼️ 1. Add Your Logo
 
-This is the fun part — completely free, no server required.
+1. Drop your logo image into the project folder (e.g. `logo.png`).
+2. Open `index.html` and find:
+   ```html
+   <img src="YOUR_LOGO_PATH" alt="AWS Cloud Clubs" class="banner-logo" />
+   ```
+3. Replace `YOUR_LOGO_PATH` with your file name:
+   ```html
+   <img src="logo.png" alt="Your Club Name" class="banner-logo" />
+   ```
 
-### 1️⃣ Create a Google Sheet
+---
+
+## 💬 2. Add Your WhatsApp Group Link
+
+1. Open your WhatsApp group → **Group Info → Invite via link → Copy link**.
+2. Open `index.html` and find the success page section:
+   ```html
+   <a href="YOUR_WHATSAPP_GROUP_URL" target="_blank" ...></a>
+   ```
+3. Replace `YOUR_WHATSAPP_GROUP_URL` with your invite link:
+   ```html
+   <a href="https://chat.whatsapp.com/YOUR_GROUP_ID" target="_blank" ...></a>
+   ```
+
+---
+
+## 📊 3. Connect Your Google Sheet
+
+Completely free, no server required.
+
+### 3a. Create a Google Sheet
 
 - Go to [sheets.google.com](https://sheets.google.com) and create a new spreadsheet.
 - Add these headers in **Row 1**:
@@ -69,7 +115,7 @@ This is the fun part — completely free, no server required.
 | --------- | ---------- | --------- | ----- | ----- | ------ | ------- | ---- | -------- | ------------ | ------------ | ------ | ----------- | ---------- | -------- |
 | Timestamp | First Name | Last Name | Gmail | Phone | Branch | Section | Year | Why Join | Improvements | Expectations | Skills | Other Skill | Proof Link | Workshop |
 
-### 2️⃣ Add the Apps Script
+### 3b. Add the Apps Script
 
 - In your spreadsheet, go to **Extensions → Apps Script**.
 - Delete any boilerplate code and paste:
@@ -105,7 +151,7 @@ function doPost(e) {
 
 - Click **Save** (💾).
 
-### 3️⃣ Deploy as a Web App
+### 3c. Deploy as a Web App
 
 1. Click **Deploy → New deployment**
 2. Click the gear icon → select **Web app**
@@ -118,18 +164,24 @@ function doPost(e) {
    https://script.google.com/macros/s/AKfycbx.../exec
    ```
 
-### 4️⃣ Paste the URL in `script.js`
+### 3d. Paste the URL in `script.js`
 
-Open `script.js` and replace the placeholder:
+Open `script.js` and find:
+
+```javascript
+const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SHEET_URL";
+```
+
+Replace with your URL:
 
 ```javascript
 const GOOGLE_SHEET_URL =
   "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec";
 ```
 
-That's it — form submissions now land in your spreadsheet. 🎉
+Done — form submissions now land in your spreadsheet. 🎉
 
-> **Tip:** If you update the Apps Script later, you need to create a **new deployment** (or update the existing one) for changes to take effect.
+> **Tip:** If you update the Apps Script later, create a **new deployment** (or update the existing one) for changes to take effect.
 
 ---
 
@@ -141,6 +193,7 @@ That's it — form submissions now land in your spreadsheet. 🎉
 | Colors, fonts, animations           | `styles.css`                        |
 | Validation rules & submission logic | `script.js`                         |
 | WhatsApp group link                 | `index.html` → success page section |
+| Banner logo                         | `index.html` → banner section       |
 
 ---
 
@@ -150,6 +203,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
+## 🙌 Credits
+
+Created and open-sourced by **[Technical Monish](https://github.com/technicalmonish)** to make recruitment forms accessible to everyone — no more depending on Google Forms or paid form builders. Fork it, customize it, share it in your groups, and start collecting applications for free.
+
+If this template helped you, consider giving it a ⭐ on GitHub.
+
+---
+
 <p align="center">
-  Built with ☁️ by the AWS Cloud Clubs community
+  Made with ☁️ by <a href="https://github.com/technicalmonish">Technical Monish</a>
 </p>

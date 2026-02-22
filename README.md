@@ -72,7 +72,7 @@
 ├── index.html      # Multi-step form markup
 ├── styles.css      # All styling, animations, and responsive rules
 ├── script.js       # Navigation, validation, confetti, and Sheets submission
-├── logo.png        # Your club/org logo (replace with your own)
+├── banner.png      # Your club/org logo (replace with your own)
 └── README.md
 ```
 
@@ -82,24 +82,24 @@
 
 After cloning, you only need to replace **3 placeholders** to make this your own:
 
-| Placeholder               | File         | What to Replace With                     |
-| ------------------------- | ------------ | ---------------------------------------- |
-| `YOUR_LOGO_PATH`          | `index.html` | Path to your logo file (e.g. `logo.png`) |
-| `YOUR_GOOGLE_SHEET_URL`   | `script.js`  | Your Google Apps Script Web App URL      |
-| `YOUR_WHATSAPP_GROUP_URL` | `index.html` | Your WhatsApp group invite link          |
+| Placeholder               | File         | What to Replace With                       |
+| ------------------------- | ------------ | ------------------------------------------ |
+| `YOUR_LOGO_PATH`          | `index.html` | Path to your logo file (e.g. `banner.png`) |
+| `YOUR_GOOGLE_SHEET_URL`   | `script.js`  | Your Google Apps Script Web App URL        |
+| `YOUR_WHATSAPP_GROUP_URL` | `index.html` | Your WhatsApp group invite link            |
 
 ---
 
 ## 🖼️ 1. Add Your Logo
 
-1. Drop your logo image into the project folder (e.g. `logo.png`).
+1. Drop your logo image into the project folder (e.g. `banner.png`).
 2. Open `index.html` and find:
    ```html
    <img src="YOUR_LOGO_PATH" alt="AWS Cloud Clubs" class="banner-logo" />
    ```
 3. Replace `YOUR_LOGO_PATH` with your file name:
    ```html
-   <img src="logo.png" alt="Your Club Name" class="banner-logo" />
+   <img src="banner.png" alt="Your Club Name" class="banner-logo" />
    ```
 
 ---
